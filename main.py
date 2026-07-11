@@ -22,12 +22,17 @@ def add_expense():
     print(f"Expense of {expense_name} added successfully!")
    
 
-
+def view_expense():
+    if not expenses:
+        print("No expenses recorded yet.")
+    else:
+        print("Expenses:")
+        for category, details in expenses.items():
+            print(f"Category: {category}, Expense Name: {details['Expense Name']}, Amount: {details['Expense Amount']}")
     
 match option:
     case 1:
         add_expense()   
+    case 2:
+        view_expense()
 
-print(expenses)
-add_expense()
-print(expenses)
