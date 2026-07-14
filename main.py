@@ -29,10 +29,16 @@ def view_expense():
         print("Expenses:")
         for category, details in expenses.items():
             print(f"Category: {category}, Expense Name: {details['Expense Name']}, Amount: {details['Expense Amount']}")
+        
+def exit_program():
+    print("Exiting the Expense Tracker. Goodbye!")
+    exit()
     
 match option:
     case 1:
         add_expense()   
     case 2:
         view_expense()
+    case 3:
+        exit_program()
 
